@@ -1,0 +1,93 @@
+<header class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Welcome To Vinay Flight Booking....!</a>
+    <div class="collapse navbar-collapse">
+      <form class="form-inline my-2 my-lg-0 ml-auto">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="button" (click)="logout()">Logout</button>
+      </form>
+    </div>
+  </div>
+</header>
+<!-- <button class="btn btn-outline-danger my-2 my-sm-0" (click)="logout()">Logout</button>-->
+<div class="container">
+  <h3>Book a Flight</h3>
+  <form (submit)="searchFlights()">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="source">Source</label>
+        <input type="text" class="form-control" id="source" [(ngModel)]="source" name="source" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="destination">Destination</label>
+        <input type="text" class="form-control" id="destination" [(ngModel)]="destination" name="destination" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="date">Date</label>
+        <input type="date" class="form-control" id="date" [(ngModel)]="date" name="date" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <h3 class="mt-4">Available Flights</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Flight Number</th>
+        <th>Flight Name</th>
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Cost</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let flight of flights">
+        <td>{{ flight.flight_number }}</td>
+        <td>{{ flight.flight_name }}</td>
+        <td>{{ flight.source }}</td>
+        <td>{{ flight.destination }}</td>
+        <td>{{ flight.date |date: 'dd-MMM-yyyy' }}</td>
+        <td>{{ flight.departure_time }}</td>
+        <td>{{ flight.arrival_time }}</td>
+        <td>{{ flight.cost }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="bookFlight(flight.id)">Book</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 class="mt-4">Your Bookings</h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Booking ID</th>
+        <th>Flight Number</th>
+        
+        <th>Source</th>
+        <th>Destination</th>
+        <th>Date</th>
+        <th>Cost</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let booking of bookings">
+        <td>{{ booking.id }}</td>
+        <td>{{ booking.flight_number }}</td>
+        <td>{{ booking.source }}</td>
+        <td>{{ booking.destination }}</td>
+        <td>{{ booking.date | date: 'dd-MMM-yyyy' }}</td>
+        <td>{{ booking.cost }}</td>
+        <td>
+          <button class="btn btn-secondary" style="margin-right: 15px;" (click)="updateBooking(booking.id)">Update</button>
+          <button class="btn btn-danger" (click)="deleteBooking(booking.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

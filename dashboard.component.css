@@ -1,0 +1,25 @@
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.form-inline .btn {
+  margin-left: 5px;
+}
+
+.update-btn {
+  margin-right: 15px; /* Adjust the value to your desired spacing */
+}
+
+.available-flights {
+  color: #b3f714; /* Change the color of the header */
+}
+
+.available-flights-table {
+  background-color: #f8f9fa; /* Change the background color of the table */
+  border: 1px solid #dee2e6; /* Add a border to the table */
+}

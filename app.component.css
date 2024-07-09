@@ -1,0 +1,12 @@
+/* src/app/app.component.css */
+
+h1 {
+    color: #d40a0a; /* Tomato color */
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Change to desired font family */
+    font-size: 2.5em; /* Adjust font size */
+    font-weight: bold; /* Make the font bold */
+    text-align: center; /* Center align the text */
+    margin-top: 20px; /* Add some margin at the top */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle text shadow */
+  }
+  

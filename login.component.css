@@ -1,0 +1,14 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-image: url('https://w0.peakpx.com/wallpaper/95/896/HD-wallpaper-simply-beautiful-airliner-flight-beautiful-sunset-clouds-splendor-beauty-sunrise-amazing-lovely-view-sunlight-colors-sky-aircraft-peaceful-nature.jpg'); /* Use a placeholder image */
+    background-size: cover; /* Make the background cover the entire viewport */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-attachment: fixed; /* Make the background fixed while scrolling */
+    background-position: center; /* Center the background image */
+    font-family: Arial, sans-serif; /* Ensure consistent font family */
+}
+  
